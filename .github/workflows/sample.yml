@@ -12,3 +12,7 @@ jobs:
           run: echo "Done -bye!"
         - name: print something
           run: echo "something"
+        - name: print multi-line output
+          run: |
+              echo "first output"
+              echo "second output"
