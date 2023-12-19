@@ -10,3 +10,5 @@ jobs:
           run: echo "HelloWorld!"
         - name: print goodbye
           run: echo "Done -bye!"
+        - name: print something
+          run: echo something"
