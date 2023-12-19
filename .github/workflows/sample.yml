@@ -11,4 +11,4 @@ jobs:
         - name: print goodbye
           run: echo "Done -bye!"
         - name: print something
-          run: echo something"
+          run: echo "something"
