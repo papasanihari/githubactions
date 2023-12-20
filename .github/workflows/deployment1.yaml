@@ -22,12 +22,12 @@ jobs:
         run: npm run build
         continue-on-error: true
       - name: upload build artifacts
-        run: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
       #- name: test code
         #continue-on-error: true
-        #with:
-         #name: dist-files
-         #path: dist
+        with:
+         name: dist-files
+         path: dist
         
   deploy:
     needs: build
