@@ -22,8 +22,8 @@ jobs:
         run: npm run build
       - name: upload build artifacts
         run: actions/upload-artifact@v3
-      - name: test code
-        continue-on-error: true
+      #- name: test code
+        #continue-on-error: true
         #with:
          #name: dist-files
          #path: dist
