@@ -20,14 +20,14 @@ jobs:
         run: npm ci
       - name: build website
         run: npm run build
-        continue-on-error: true
-      - name: upload build artifacts
-      - uses: actions/upload-artifact@v3
+        #continue-on-error: true
+      #- name: upload build artifacts
+      - uses: actions/upload-artifact@main
       #- name: test code
         #continue-on-error: true
         with:
-         name: dist-files
-         path: dist
+         name: webpack artifacts
+         path: public/
         
   deploy:
     needs: build
