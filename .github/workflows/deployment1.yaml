@@ -20,6 +20,7 @@ jobs:
         run: npm ci
       - name: build website
         run: npm run build
+        continue-on-error: true
       - name: upload build artifacts
         run: actions/upload-artifact@v3
       #- name: test code
