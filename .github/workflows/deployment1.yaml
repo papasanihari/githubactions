@@ -22,9 +22,9 @@ jobs:
         run: npm run build
       - name: upload build artifacts
         run: actions/upload-artifacts@v3
-        with:
-         name: dist-files
-         path: dist
+        #with:
+         #name: dist-files
+         #path: dist
         
   deploy:
     needs: build
