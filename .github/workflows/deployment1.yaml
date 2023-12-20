@@ -34,9 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@main
         with:
-          name: dist-files
+          name: webpack artifacts
+          path: public/
       - name: output contents
         run: ls
       - name: Deploy code
