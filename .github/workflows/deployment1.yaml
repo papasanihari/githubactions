@@ -1,5 +1,5 @@
 name: Deployment Exercise 2
-on: push
+on: push 
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -10,16 +10,14 @@ jobs:
         run: npm ci
       - name: Test code
         run: npm run test
-      - name: build website
-        run: npm run build
-      - name: upload build artifacts
-        run: actions/upload-artifacts@v3
   build:
     needs: test
     runs-on: ubuntu-latest
     steps: 
       - name: Get code
         uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
       - name: build website
         run: npm run build
       - name: upload build artifacts
